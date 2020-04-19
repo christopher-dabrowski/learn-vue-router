@@ -1,6 +1,6 @@
 # learn_vue
 
-Following the tutorial from [Vue school](https://vueschool.io/lessons).
+Following the tutorial from [Vue school](https://vueschool.io/courses/vue-router-for-everyone).
 
 Project is hosted [here](https://siwykrzysiek.github.io/learn-vue-router).
 
