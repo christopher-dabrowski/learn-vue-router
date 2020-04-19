@@ -15,10 +15,14 @@
 <script>
 import store from "@/store";
 export default {
+  props: {
+    slug: {
+      type: String,
+      required: true,
+    },
+  },
   data() {
-    return {
-      slug: this.$route.params.slug,
-    };
+    return {};
   },
   computed: {
     destination() {
