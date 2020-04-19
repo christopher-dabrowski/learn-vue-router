@@ -49,8 +49,22 @@ const routes = [
       } else {
         next({ name: "notFound" });
       }
-    }
-  }
+    },
+  },
+  {
+    path: "/user",
+    name: "user",
+    component: () =>
+      import(/* webpackChunkName: "User" */ "../views/User.vue"),
+    meta: { requiresAuth: true }
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: () =>
+      import(/* webpackChunkName: "Login" */
+        "../views/Login.vue")
+  },
 ];
 
 const router = new VueRouter({
@@ -74,6 +88,20 @@ const router = new VueRouter({
       }
     }
   },
+});
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    if (!store.user) {
+      next({
+        name: "login"
+      });
+    } else {
+      next();
+    }
+  } else {
+    next();
+  }
 });
 
 export default router;

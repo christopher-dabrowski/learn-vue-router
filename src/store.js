@@ -1,6 +1,7 @@
 export default {
   destinations: [
     {
+      user: null,
       name: "Brazil",
       slug: "brazil",
       image: "brazil.jpg",
