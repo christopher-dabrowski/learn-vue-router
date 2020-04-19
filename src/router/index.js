@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
+import store from "@/store";
 
 Vue.use(VueRouter);
 
@@ -38,7 +39,17 @@ const routes = [
         /* webpackChunkName: "ExperienceDetails" */ "../views/ExperienceDetails.vue"
           ),
       }
-    ]
+    ],
+    beforeEnter: (to, from, next) => {
+      const exists = store.destinations.find(
+        destination => destination.slug === to.params.slug
+      );
+      if (exists) {
+        next();
+      } else {
+        next({ name: "notFound" });
+      }
+    }
   }
 ];
 
