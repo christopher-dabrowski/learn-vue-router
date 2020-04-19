@@ -17,13 +17,13 @@ import store from "@/store";
 export default {
   data() {
     return {
-      destinationSlug: this.$route.params.slug,
+      slug: this.$route.params.slug,
     };
   },
   computed: {
     destination() {
       return store.destinations.find(
-        (destination) => destination.slug === this.destinationSlug
+        (destination) => destination.slug === this.slug
       );
     },
   },
