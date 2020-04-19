@@ -41,7 +41,12 @@ export default {
 <style scoped>
 #nav {
   display: flex;
-  padding: 30px;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  border-bottom: 1px solid grey;
+  z-index: 1;
 }
 
 .nav-links {
