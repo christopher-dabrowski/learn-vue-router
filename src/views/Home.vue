@@ -59,4 +59,13 @@ export default {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
+a {
+  color: lightseagreen;
+  text-decoration: none;
+}
+a:hover,
+a:visited {
+  text-decoration: underline;
+}
 </style>

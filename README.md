@@ -2,6 +2,8 @@
 
 Following the tutorial from [Vue school](https://vueschool.io/lessons).
 
+Project is hosted [here](https://siwykrzysiek.github.io/learn-vue-router).
+
 ## Project setup
 
 ```
